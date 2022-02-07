@@ -1,0 +1,35 @@
+---
+title: "Aula 2"
+author: "Alan"
+date: "07/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = FALSE}
+library(palmerpenguins)
+```
+
+```{r, echo = FALSE}
+pinguins <- dplyr::tibble(penguins)
+```
+
+A base de dados pinguins apresenta dados referente à 344 pinguins, das seguintes espécies: Pinguim-de-adélia, Pinguim-gentoo, e Pinguim-de-barbicha. Os dados foram coletados entre os anos 2007 e 2009, nas seguintes ilhas: Torgersen, Biscoe, e Dream. O peso médio dos pinguins amostrados foi de 42 kg. Os dados foram obtidos através do pacote [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/).
+
+```{r, fig.align='center', echo = FALSE, eval=FALSE}
+knitr::include_graphics('https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png')
+```
+
+
+```{r, fig.align='center', echo=FALSE, fig.cap='Adaptado de [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/).'}
+knitr::include_graphics("https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png")
+```
+
+```{r, echo = FALSE}
+pinguins1 <- dplyr::filter(pinguins, island == 'Torgersen')
+DT::datatable(pinguins1)
+```
+
