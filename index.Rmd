@@ -1,0 +1,26 @@
+---
+title: ""
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+---
+
+```{r setup, include=FALSE}
+## Global options
+knitr::opts_chunk$set(cache = TRUE)
+```
+
+## Exemplo trabalho final
+
+```{r instalcao, eval = FALSE}
+#install.packages('remotes')
+#remotes::install_github('cienciadedatos/dados')
+```
+
+```{r dados}
+filmes_da_pixar <- dados::pixar_filmes
+dplyr::glimpse(filmes_da_pixar)
+```
+
+
